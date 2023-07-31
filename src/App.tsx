@@ -1,6 +1,8 @@
 import "./App.css";
+import { Button } from "./components/Button";
 import { Greet } from "./components/Greet";
 import { Heading } from "./components/Heading";
+import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
@@ -29,11 +31,17 @@ function App() {
         messageCount={9}
       />
       <Person name={personName} />
-      <PersonList names = {nameList} />
+      <PersonList names={nameList} />
       <Status status="Success" />
       <Oscar>
         <Heading>Oscar Goes To Leonardo Dicaprio !</Heading>
       </Oscar>
+      <Button
+        handleClick={(event, id) => {
+          console.log("i am clicked", event, id);
+        }}
+      />
+      <Input value="Sina" handleChange={event=>console.log("event",event)} />
     </div>
   );
 }
