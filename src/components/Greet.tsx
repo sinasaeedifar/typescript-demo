@@ -4,12 +4,11 @@ type greedProps = {
   isLoggedIn: boolean;
   messageCount?: number;
 };
-export const Greet = (props: greedProps) => {
-  const {messageCount = 0} =props
+export const Greet = ({name,family,isLoggedIn,messageCount}: greedProps) => {
   return (
     <div>
-      {props.isLoggedIn
-        ? `Hello Dear ${props.name} ! You have ${messageCount} unread messages ...`
+      {isLoggedIn
+        ? `Hello Dear ${name} ! You have ${messageCount} unread messages ...`
         : "Welcome Guest"}
     </div>
   );

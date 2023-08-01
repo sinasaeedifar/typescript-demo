@@ -1,8 +1,8 @@
 type HeadingProps = {
     children :string
 }
-export const Heading = (props:HeadingProps)=>{
+export const Heading = ({children}:HeadingProps)=>{
 return (
-    <h1>{props.children}</h1>
+    <h1>{children}</h1>
 )
 }
