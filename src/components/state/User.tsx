@@ -7,18 +7,18 @@ type AuthUser = {
 export const User = () => {
   const handleLogin = () => {
 setUser({
-    name : "Sina",
+    name : 'Sina',
     email : "sina.saeedifar@gmail.com"
 })  };
   const handleLogout = () => {
     setUser(null);
   };
-  const [user, setUser] = useState(null); //user is state variable and setUser is a setter function
+  const [user, setUser]= useState<AuthUser | null>(null); //user is state variable and setUser is a setter function
   return (
     <div>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogout}>Logout</button>
-      <div>User name is </div>
+      <div>User name is{user?.name} </div>
       <div>User Email is </div>
     </div>
   );
