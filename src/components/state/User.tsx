@@ -10,16 +10,16 @@ setUser({
     name : 'Sina',
     email : "sina.saeedifar@gmail.com"
 })  };
-  const handleLogout = () => {
-    setUser(null);
-  };
-  const [user, setUser]= useState<AuthUser | null>(null); //user is state variable and setUser is a setter function
+  // const handleLogout = () => {
+  //   setUser(null);
+  // };
+  const [user, setUser]= useState<AuthUser>({} as AuthUser); //user is state variable and setUser is a setter function
   return (
     <div>
       <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
-      <div>User name is{user?.name} </div>
-      <div>User Email is </div>
+      {/* <button onClick={handleLogout}>Logout</button> */}
+      <div>User name is{user.name} </div>
+      <div>User Email is {user.email} </div>
     </div>
   );
 };
