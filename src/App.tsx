@@ -8,6 +8,7 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
+import { Counter } from "./components/state/Counter";
 import { User } from "./components/state/User";
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         handleChange={(event) => console.log("event", event)}
       />
       <User/>
+      <Counter />
       <Container style={{ padding: "1rem", border: "1px solid black" }} />
     </div>
   );
