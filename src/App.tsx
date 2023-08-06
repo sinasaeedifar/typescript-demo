@@ -8,6 +8,8 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { Counter } from "./components/state/Counter";
 import { User } from "./components/state/User";
 
@@ -48,9 +50,12 @@ function App() {
         value="Sina"
         handleChange={(event) => console.log("event", event)}
       />
-      <User/>
+      <User />
       <Counter />
       <Container style={{ padding: "1rem", border: "1px solid black" }} />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
