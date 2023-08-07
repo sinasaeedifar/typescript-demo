@@ -10,8 +10,9 @@ import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { User } from "./components/context/User";
+import { UserContextProvider } from "./components/context/UserContext";
 import { Counter } from "./components/state/Counter";
-import { User } from "./components/state/User";
 
 function App() {
   const personName = {
@@ -28,7 +29,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Heading>this a strong heading</Heading>
+      {/* <Heading>this a strong heading</Heading>
       <Greet
         name="Sina"
         family="Saeedifar"
@@ -49,13 +50,15 @@ function App() {
       <Input
         value="Sina"
         handleChange={(event) => console.log("event", event)}
-      />
-      <User />
-      <Counter />
-      <Container style={{ padding: "1rem", border: "1px solid black" }} />
-      <ThemeContextProvider>
+      /> */}
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      {/* <Counter />
+      <Container style={{ padding: "1rem", border: "1px solid black" }} /> */}
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
     </div>
   );
 }
