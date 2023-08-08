@@ -8,6 +8,7 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
+import { CounterClass } from "./components/class/CounterClass";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { User } from "./components/context/User";
@@ -57,7 +58,7 @@ function App() {
       <UserContextProvider>
         <User />
       </UserContextProvider>
-      <Counter />
+      <CounterClass message="The Count Value Is" />
       <Container style={{ padding: "1rem", border: "1px solid black" }} />
       <ThemeContextProvider>
         <Box />
