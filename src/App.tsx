@@ -12,6 +12,8 @@ import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { User } from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
+import { Domref } from "./components/ref/DomRef";
+import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/state/Counter";
 
 function App() {
@@ -29,7 +31,8 @@ function App() {
   ];
   return (
     <div className="App">
-      {/* <Heading>this a strong heading</Heading>
+       <MutableRef />
+      <Heading>this a strong heading</Heading>
       <Greet
         name="Sina"
         family="Saeedifar"
@@ -50,15 +53,17 @@ function App() {
       <Input
         value="Sina"
         handleChange={(event) => console.log("event", event)}
-      /> */}
+      />
       <UserContextProvider>
         <User />
       </UserContextProvider>
-      {/* <Counter />
-      <Container style={{ padding: "1rem", border: "1px solid black" }} /> */}
-      {/* <ThemeContextProvider>
+      <Counter />
+      <Container style={{ padding: "1rem", border: "1px solid black" }} />
+      <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider> */}
+      </ThemeContextProvider>
+      <Domref />
+     
     </div>
   );
 }
