@@ -19,6 +19,7 @@ import { Domref } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/state/Counter";
 import { Profile } from "./components/auth/Profile";
+import { List } from "./components/generics/List";
 
 function App() {
   const personName = {
@@ -35,7 +36,27 @@ function App() {
   ];
   return (
     <div className="App">
-       <MutableRef />
+      <List
+        items={[
+          {
+            id: 1,
+            name: "sina",
+            lastName: "Saeedifar",
+          },
+          {
+            id: 2,
+            name: "Sajjad",
+            lastName: "Jbar",
+          },
+          {
+            id: 3,
+            name: "Marziyeh",
+            lastName: "Bigham",
+          },
+        ]}
+        onClick={(item) => console.log(item.name)}
+      />
+      <MutableRef />
       <Heading>this a strong heading</Heading>
       <Greet
         name="Sina"
@@ -67,8 +88,7 @@ function App() {
         <Box />
       </ThemeContextProvider>
       <Domref />
-      <Private IsLoggedIn={false} component={Profile}/>
-     
+      <Private IsLoggedIn={false} component={Profile} />
     </div>
   );
 }
