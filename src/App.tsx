@@ -1,3 +1,4 @@
+import { profile } from "console";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Container } from "./components/Container";
@@ -8,6 +9,7 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
+import { Private } from "./components/auth/Private";
 import { CounterClass } from "./components/class/CounterClass";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
@@ -16,6 +18,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { Domref } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/state/Counter";
+import { Profile } from "./components/auth/Profile";
 
 function App() {
   const personName = {
@@ -64,6 +67,7 @@ function App() {
         <Box />
       </ThemeContextProvider>
       <Domref />
+      <Private IsLoggedIn={false} component={Profile}/>
      
     </div>
   );
