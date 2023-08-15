@@ -20,6 +20,7 @@ import { MutableRef } from "./components/ref/MutableRef";
 import { Counter } from "./components/state/Counter";
 import { Profile } from "./components/auth/Profile";
 import { List } from "./components/generics/List";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 
 function App() {
   const personName = {
@@ -57,6 +58,7 @@ function App() {
         onClick={(item) => console.log(item.name)}
       />
       <MutableRef />
+      <RandomNumber value={10} isPositive  />
       <Heading>this a strong heading</Heading>
       <Greet
         name="Sina"
